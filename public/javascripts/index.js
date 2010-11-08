@@ -1,29 +1,51 @@
 Ext.setup({
   onReady: function() {
-    var eventPanel, resetButton, viewport;
+    var eventPanel1, eventPanel2, resetButton, viewport;
 
-    eventPanel = new InteractivePanel({
+    eventPanel1 = new InteractivePanel({
       tpl: Ext.XTemplate.from('report-interactions'),
-      styleHtmlContent: true
+      styleHtmlContent: true,
+      style: 'background-color: #ccc;',
+      listeners: {
+        interact: function(type,event) {
+          this.eventStats[type] += 1;
+          this.update(this.eventStats);
+        },
+        delay: 2000
+      }
     });
-    eventPanel.addListener({
-      interact: function(type,event) {
-        this.eventStats[type] += 1;
-        this.update(this.eventStats);
-      },
-      single: true
+
+    eventPanel2 = new InteractivePanel({
+      tpl: Ext.XTemplate.from('report-interactions'),
+      styleHtmlContent: true,
+      style: 'background-color: #999;',
+      listeners: {
+        interact: function(type,event) {
+          this.eventStats[type] += 1;
+          this.update(this.eventStats);
+        },
+        buffer: 2000
+      }
     });
 
     resetButton = new Ext.Button({
       text: 'reset',
       dock: 'bottom',
-      handler: function() { eventPanel.resetStats() }
+      handler: function() {
+        eventPanel1.resetStats();
+        eventPanel2.resetStats()
+      }
     });
 
     viewport = new Ext.Panel({
       fullscreen: true,
-      layout: "fit",
-      items: [eventPanel],
+      defaults: {flex: 1},
+      layout: {
+        type: 'hbox',
+        align: 'stretch',
+        pack: 'center'
+      },
+      items: [eventPanel1, eventPanel2],
       dockedItems: [resetButton]
     });
 
