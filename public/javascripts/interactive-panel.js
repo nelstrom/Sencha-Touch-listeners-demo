@@ -1,6 +1,6 @@
 var InteractivePanel = Ext.extend( Ext.Panel, {
 
-  initComponent : function() {
+  initComponent: function() {
     InteractivePanel.superclass.initComponent.call(this);
     this.addEvents('interact');
   },
