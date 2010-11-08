@@ -1,6 +1,3 @@
-// http://www.sencha.com/forum/showthread.php?105114-COMPLETE-198-Inline-method-for-attaching-dom-events&p=509711#post509711
-//
-
 Ext.setup({
   onReady: function() {
     var eventPanel, viewport;
