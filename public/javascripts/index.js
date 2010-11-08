@@ -10,7 +10,8 @@ Ext.setup({
       interact: function(type,event) {
         this.eventStats[type] += 1;
         this.update(this.eventStats);
-      }
+      },
+      single: true
     });
 
     resetButton = new Ext.Button({
