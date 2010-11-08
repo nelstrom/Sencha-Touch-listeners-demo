@@ -41,6 +41,14 @@ And you can switch between branches with the `checkout` command. For example, to
 
     git co 03_capture_more_interactions
 
+Live demo
+---------
+
+You can try out the demo here:
+
+* [http://listeners-demo.heroku.com/][d]
+
+This uses the code from the branch [05_add_reset_button][05].
 
 [00]: https://github.com/nelstrom/Sencha-Touch-listeners-demo/tree/00_blank_slate
 [01]: https://github.com/nelstrom/Sencha-Touch-listeners-demo/tree/01_simple_logger
@@ -50,3 +58,4 @@ And you can switch between branches with the `checkout` command. For example, to
 [05]: https://github.com/nelstrom/Sencha-Touch-listeners-demo/tree/05_add_reset_button
 [06]: https://github.com/nelstrom/Sencha-Touch-listeners-demo/tree/06_one_time_listeners
 [07]: https://github.com/nelstrom/Sencha-Touch-listeners-demo/tree/07_delays_and_buffers
+[d]: http://listeners-demo.heroku.com/
