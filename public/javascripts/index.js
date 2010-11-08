@@ -1,6 +1,6 @@
 Ext.setup({
   onReady: function() {
-    var eventPanel, viewport;
+    var eventPanel, resetButton, viewport;
 
     eventPanel = new InteractivePanel({
       tpl: Ext.XTemplate.from('report-interactions'),
@@ -13,10 +13,17 @@ Ext.setup({
       }
     });
 
+    resetButton = new Ext.Button({
+      text: 'reset',
+      dock: 'bottom',
+      handler: function() { eventPanel.resetStats() }
+    });
+
     viewport = new Ext.Panel({
       fullscreen: true,
       layout: "fit",
-      items: [eventPanel]
+      items: [eventPanel],
+      dockedItems: [resetButton]
     });
 
   }
