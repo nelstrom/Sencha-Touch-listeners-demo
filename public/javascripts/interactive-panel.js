@@ -7,7 +7,7 @@ var InteractivePanel = Ext.extend( Ext.Panel, {
 
   afterRender: function() {
     InteractivePanel.superclass.afterRender.call(this);
-    this.addManagedListener(this.el, {
+    this.mon(this.el, {
       tap: function(e) { this.fireEvent('interact', e.type, e); },
       scope: this
     });
