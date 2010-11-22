@@ -5,25 +5,23 @@ var InteractivePanel = Ext.extend( Ext.Panel, {
   initComponent : function() {
     InteractivePanel.superclass.initComponent.call(this);
     this.addEvents('interact');
-  },
-
-  afterRender: function() {
-    InteractivePanel.superclass.afterRender.call(this);
-    this.addManagedListener(this.el, {
-      touchstart: this.handleEvent,
-      touchend: this.handleEvent,
-      touchmove: this.handleEvent,
-      touchdown: this.handleEvent,
-      scrollstart: this.handleEvent,
-      scroll: this.handleEvent,
-      scrollend: this.handleEvent,
-      singletap: this.handleEvent,
-      tap: this.handleEvent,
-      doubletap: this.handleEvent,
-      taphold: this.handleEvent,
-      tapcancel: this.handleEvent,
-      swipe: this.handleEvent,
-      scope: this
+    this.addListener({
+      el: {
+        touchstart: this.handleEvent,
+        touchend: this.handleEvent,
+        touchmove: this.handleEvent,
+        touchdown: this.handleEvent,
+        dragstart: this.handleEvent,
+        drag: this.handleEvent,
+        dragend: this.handleEvent,
+        singletap: this.handleEvent,
+        tap: this.handleEvent,
+        doubletap: this.handleEvent,
+        taphold: this.handleEvent,
+        tapcancel: this.handleEvent,
+        swipe: this.handleEvent,
+        scope: this
+      }
     });
     this.resetStats();
   },
@@ -38,9 +36,9 @@ var InteractivePanel = Ext.extend( Ext.Panel, {
       touchend: 0,
       touchmove: 0,
       touchdown: 0,
-      scrollstart: 0,
-      scroll: 0,
-      scrollend: 0,
+      dragstart: 0,
+      drag: 0,
+      dragend: 0,
       singletap: 0,
       taphold: 0,
       tapcancel: 0,
