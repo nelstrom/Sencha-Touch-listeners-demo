@@ -53,7 +53,7 @@ This uses the code from the branch [05_add_reset_button][05].
 [00]: https://github.com/nelstrom/Sencha-Touch-listeners-demo/tree/00_blank_slate
 [01]: https://github.com/nelstrom/Sencha-Touch-listeners-demo/tree/01_simple_logger
 [02]: https://github.com/nelstrom/Sencha-Touch-listeners-demo/tree/02_addEvent_interact
-[03]: https://github.com/nelstrom/Sencha-Touch-listeners-demo/tree/04_report_interactions_with_a_template
+[03]: https://github.com/nelstrom/Sencha-Touch-listeners-demo/tree/03_capture_more_interactions
 [04]: https://github.com/nelstrom/Sencha-Touch-listeners-demo/tree/04_report_interactions_with_a_template
 [05]: https://github.com/nelstrom/Sencha-Touch-listeners-demo/tree/05_add_reset_button
 [06]: https://github.com/nelstrom/Sencha-Touch-listeners-demo/tree/06_one_time_listeners
